@@ -33,7 +33,7 @@ jobs:
           path: ./mochawesome-report
       
       - name: list files
-        run:
+        run: |
           ls -R .
           find . -name "lcov.info"
       
