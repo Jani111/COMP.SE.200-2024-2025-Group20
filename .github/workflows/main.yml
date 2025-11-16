@@ -33,3 +33,6 @@ jobs:
         with:
           name: test-report
           path: ./mochawesome-report
+          
+      - name: Coveralls
+        uses: coverallsapp/github-action@v2
