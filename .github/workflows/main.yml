@@ -34,8 +34,7 @@ jobs:
       
       - name: list files
         run: |
-          ls -R .
-          find . -name "lcov.info"
+          sed -n '1,50p' coverage/lcov.info
       
       - name: Coveralls
         uses: coverallsapp/github-action@v2
