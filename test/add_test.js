@@ -9,8 +9,8 @@ describe("addTests", () => {
         expect(add(2,3)).to.equal(5)
     })
 
-        it("should return 5 with augend as 2 and addend as 3", ()=>
+        it("should return 12 with augend as 2 and addend as 10", ()=>
     {
-        expect(add(2,3)).to.equal(6)
+        expect(add(2,10)).to.equal(12)
     })
 })
