@@ -1,3 +1,4 @@
+[![Coverage Status](https://coveralls.io/repos/github/Jani111/COMP.SE.200-2024-2025-Group20/badge.svg?branch=main)](https://coveralls.io/github/Jani111/COMP.SE.200-2024-2025-Group20?branch=main)
 # Student template
 
 ## Purpose of this repository
