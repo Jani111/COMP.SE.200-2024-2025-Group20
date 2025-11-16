@@ -33,6 +33,7 @@ jobs:
         with:
           name: test-report
           path: ./mochawesome-report
-          
+
       - name: Coveralls
+        if: always()
         uses: coverallsapp/github-action@v2
