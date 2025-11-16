@@ -31,7 +31,12 @@ jobs:
         with:
           name: test-report
           path: ./mochawesome-report
-
+      
+      - name: list files
+        run:
+          ls -R .
+          find . -name "lcov.info"
+      
       - name: Coveralls
         uses: coverallsapp/github-action@v2
         with:
