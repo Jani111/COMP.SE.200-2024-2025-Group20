@@ -1,5 +1,5 @@
 import { expect } from "chai"
-import ceil from "../src/ceil.js"
+import ceil from "../../src/ceil.js"
 
 describe("ceilTests", () => {
 
