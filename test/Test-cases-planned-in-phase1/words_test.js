@@ -1,5 +1,5 @@
 import { expect } from "chai"
-import words from "../src/words.js"
+import words from "../../src/words.js"
 
 describe("wordsTests", () => {
 
