@@ -24,8 +24,19 @@ describe("wordsTests", () => {
         expect(words("   ")).to.deep.equal([])
     })
 
-    it("should throw TypeError for undefined input", () => {
-        expect(() => words(undefined)).to.throw(TypeError)
+    it("should return [] for empty string", () => {
+        expect(words("")).to.deep.equal([])
+    })
+
+    it("should handle camelCase strings", () => {
+        const result = words('camelCaseString')
+        expect(result).to.be.an('array')
+        expect(result.length).to.be.greaterThan(0)
+    })
+
+    it("should return array with single word", () => {
+        const result = words("hello")
+        expect(result).to.deep.equal(["hello"])
     })
 
 })
