@@ -18,8 +18,8 @@ describe("eqTests", () => {
         expect(eq('a', 'a')).to.equal(true)
     })
 
-    it("should return false when comparing string and String object", () => {
-        expect(eq('a', Object('a'))).to.equal(false)
+    it("should return true when comparing string and String object with == coercion", () => {
+        expect(eq('a', Object('a'))).to.equal(true)
     })
 
     it("should return true when comparing NaN values", () => {

@@ -43,8 +43,8 @@ describe("ceilTests", () => {
         expect(ceil(1.2345, 3)).to.equal(1.235)
     })
 
-    it("should round up large number 123456 with precision -3 to 123000", () => {
-        expect(ceil(123456, -3)).to.equal(123000)
+    it("should round up large number 123456 with precision -3 to 124000", () => {
+        expect(ceil(123456, -3)).to.equal(124000)
     })
 
     it("should handle very small decimal 0.001 with precision 2", () => {
