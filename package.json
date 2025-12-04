@@ -8,9 +8,9 @@
     "testp1": "mocha \"test/Test-cases-planned-in-phase1/*_test.js\" --reporter mochawesome --reporter-options reportDir=reports/Phase1-reports/unittest,reportFilename=P1_Report",
     "testp2": "mocha \"test/Test-cases-planned-in-phase2/*_test.js\" --reporter mochawesome --reporter-options reportDir=reports/Phase2-reports/unittest,reportFilename=P2_Report",
     "testAI": "mocha \"test/Test-cases-generated-by-ChatGPT/*_test.js\" --reporter mochawesome --reporter-options reportDir=reports/AI-reports/unittest,reportFilename=AI_Report",
-    "coveragep1": "c8 --report-dir=reports/Phase1-reports/coverage --check-coverage --lines 70 --reporter=lcov --reporter=html --reporter=text mocha \"test/Test-cases-planned-in-phase1/*_test.js\" --reporter mochawesome --reporter-options reportDir=reports/Phase1-reports/unittest,reportFilename=P1_Report",
-    "coveragep2": "c8 --report-dir=reports/Phase2-reports/coverage --check-coverage --lines 70 --reporter=lcov --reporter=html --reporter=text mocha \"test/Test-cases-planned-in-phase2/*_test.js\" --reporter mochawesome --reporter-options reportDir=reports/Phase2-reports/unittest,reportFilename=P2_Report",
-    "coverageAI": "c8 --report-dir=reports/AI-reports/coverage --check-coverage --lines 70 --reporter=lcov --reporter=html --reporter=text mocha \"test/Test-cases-generated-by-ChatGPT/*_test.js\" --reporter mochawesome --reporter-options reportDir=reports/AI-reports/unittest,reportFilename=AI_Report"
+    "coveragep1": "c8 --report-dir=reports/Phase1-reports/coverage --exclude=src/.internal/** --exclude=test/** --check-coverage --lines 70 --reporter=lcov --reporter=html --reporter=text mocha \"test/Test-cases-planned-in-phase1/*_test.js\" --reporter mochawesome --reporter-options reportDir=reports/Phase1-reports/unittest,reportFilename=P1_Report",
+    "coveragep2": "c8 --report-dir=reports/Phase2-reports/coverage --exclude=src/.internal/** --exclude=test/** --check-coverage --lines 70 --reporter=lcov --reporter=html --reporter=text mocha \"test/Test-cases-planned-in-phase2/*_test.js\" --reporter mochawesome --reporter-options reportDir=reports/Phase2-reports/unittest,reportFilename=P2_Report",
+    "coverageAI": "c8 --report-dir=reports/AI-reports/coverage --exclude=src/.internal/** --exclude=test/** --check-coverage --lines 70 --reporter=lcov --reporter=html --reporter=text mocha \"test/Test-cases-generated-by-ChatGPT/*_test.js\" --reporter mochawesome --reporter-options reportDir=reports/AI-reports/unittest,reportFilename=AI_Report"
     
   },
   "author": "",
