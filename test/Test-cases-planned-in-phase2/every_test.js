@@ -37,4 +37,21 @@ describe("everyTests", () => {
         expect(passedArray).to.deep.equal([1, 2, 3])
     })
 
+    it("should return true for null array", () => {
+        expect(every(null, (x) => x > 0)).to.equal(true)
+    })
+
+    it("should return true for undefined array", () => {
+        expect(every(undefined, (x) => x > 0)).to.equal(true)
+    })
+
+    it("should stop iteration when predicate returns false", () => {
+        let count = 0
+        every([1, 2, 3, 4, 5], (x) => {
+            count++
+            return x < 3
+        })
+        expect(count).to.equal(3)
+    })
+
 })

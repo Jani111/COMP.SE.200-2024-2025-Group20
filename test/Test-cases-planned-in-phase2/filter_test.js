@@ -44,4 +44,17 @@ describe("filterTests", () => {
         expect(passedArray).to.deep.equal([1, 2, 3])
     })
 
+    it("should return [[]] for null array", () => {
+        expect(filter(null, (x) => x > 0)).to.deep.equal([[]])
+    })
+
+    it("should return [[]] for undefined array", () => {
+        expect(filter(undefined, (x) => x > 0)).to.deep.equal([[]])
+    })
+
+    it("should filter with boolean conversion", () => {
+        const result = filter([0, 1, false, 2, '', 3], Boolean)
+        expect(result).to.deep.include(1, 2, 3)
+    })
+
 })

@@ -31,4 +31,20 @@ describe("differenceTests", () => {
         expect(difference([5, 4, 3, 2, 1], [2, 4])).to.deep.equal([5, 3, 1])
     })
 
+    it("should return empty array when first argument is not array-like", () => {
+        expect(difference(null, [1, 2])).to.deep.equal([])
+    })
+
+    it("should return empty array when first argument is undefined", () => {
+        expect(difference(undefined, [1, 2])).to.deep.equal([])
+    })
+
+    it("should return empty array when first argument is a string", () => {
+        expect(difference("hello", ["h", "e"])).to.deep.equal([])
+    })
+
+    it("should handle empty exclusion arrays", () => {
+        expect(difference([1, 2, 3], [])).to.deep.equal([1, 2, 3])
+    })
+
 })

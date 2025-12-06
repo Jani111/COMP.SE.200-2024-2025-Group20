@@ -39,4 +39,12 @@ describe("wordsTests", () => {
         expect(result).to.deep.equal(["hello"])
     })
 
+    it("should return [] for string with only special ASCII characters", () => {
+        expect(words("!@#$%")).to.deep.equal([])
+    })
+
+    it("should return [] when custom pattern finds no matches", () => {
+        expect(words("hello world", /[0-9]+/g)).to.deep.equal([])
+    })
+
 })

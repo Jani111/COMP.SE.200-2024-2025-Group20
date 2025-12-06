@@ -28,4 +28,17 @@ describe("atTests", () => {
         expect(at(object)).to.deep.equal([])
     })
 
+    it("should handle null object", () => {
+        expect(at(null, 'a')).to.deep.equal([undefined])
+    })
+
+    it("should handle undefined object", () => {
+        expect(at(undefined, 'a')).to.deep.equal([undefined])
+    })
+
+    it("should handle array of paths as single argument", () => {
+        const object = { 'a': 1, 'b': 2, 'c': 3 }
+        expect(at(object, ['a', 'c'])).to.deep.equal([1, 3])
+    })
+
 })

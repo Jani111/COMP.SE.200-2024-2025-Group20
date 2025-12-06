@@ -40,4 +40,25 @@ describe("getTests", () => {
         expect(get(null, 'a.b.c', 'default')).to.equal('default')
     })
 
+    it("should handle Symbol as path", () => {
+        const sym = Symbol('test')
+        const object = { [sym]: 'symbolValue' }
+        expect(get(object, sym)).to.equal('symbolValue')
+    })
+
+    it("should handle numeric string path", () => {
+        const object = { '0': 'first', '1': 'second' }
+        expect(get(object, '0')).to.equal('first')
+    })
+
+    it("should handle deeply nested undefined", () => {
+        const object = { 'a': { 'b': undefined } }
+        expect(get(object, 'a.b', 'default')).to.equal('default')
+    })
+
+    it("should return value when path exists but is falsy", () => {
+        const object = { 'a': { 'b': 0 } }
+        expect(get(object, 'a.b')).to.equal(0)
+    })
+
 })
